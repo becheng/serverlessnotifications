@@ -14,7 +14,7 @@ Development of an MVP to store and search through chat content.
 - Submited chats are saved to CosmosDB.
 - A CosmosDB Consistency level has been configured that works with Azure Search.
 - All saved chats are searchable.
-- A minimal set of of REST apis that will do a search based on the inputted keywords and results is results.
+- A minimal set of of REST apis using Azure Functions that will do a search based on the inputted keywords and return its results as a json.
 
 
 ## Getting started
