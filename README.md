@@ -1,3 +1,20 @@
+# cosmosdb-cognitivesearch-hack
+
+Hackathon to store and search through chats/conversations using  CosmosDB + Azure Cognitive Search.
+The primary focus will be to store and search through chat content; and not about the development of an actual chat app.  This hack will build upon an existing chat app sample and extend it with search functionality.  
+
+Note: this repo is fork of https://github.com/ealsur/serverlessnotifications which contains a sample chat application built using CosmosDB, Azure Functions and SignalR.  
+
+## Objective of the Hack
+Development of an MVP to store and search through chat content.
+
+## Target Acceptance Criteria
+- Submited chats are saved to CosmosDB.
+- A CosmosDB Consistency level has been configured that works with Azure Search.
+- All saved chats are searchable.
+- A minimal set of of REST apis that will do a search based on the inputted keywords and results is results.
+
+# ---------------------------------------------------------------------------------------------------------------
 # Serverless notifications with Azure Cosmos DB + Azure Functions + Azure SignalR
 
 This repo contains a reusable solution that creates a complete serverless scenario for a chat application that stores data in [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction), [Azure Functions](https://azure.microsoft.com/services/functions/) for hosting and event processing and [Azure SignalR](https://docs.microsoft.com/azure/azure-signalr/signalr-overview) for websocket client messaging.
