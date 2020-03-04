@@ -3,7 +3,7 @@
 Hackathon to store and search through chats/conversations using  CosmosDB + Azure Cognitive Search.
 The primary focus will be to store and search through chat content; and not about the development of an actual chat app.  This hack will build upon an existing chat app sample and extend it with search functionality.  
 
-Note: this repo is fork of [@ealsur's repo](https://github.com/ealsur/serverlessnotifications) which contains a sample chat application built using [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction), [Azure Functions](https://azure.microsoft.com/services/functions/) for hosting and event processing and [Azure SignalR](https://docs.microsoft.com/azure/azure-signalr/signalr-overview).  For the full description of the how sample chat app works, see [@ealsur's sample](https://github.com/ealsur/serverlessnotifications).  
+Note: this repo is a fork of [@ealsur's repo](https://github.com/ealsur/serverlessnotifications) which contains a sample chat application built using [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction), [Azure Functions](https://azure.microsoft.com/services/functions/) and [Azure SignalR](https://docs.microsoft.com/azure/azure-signalr/signalr-overview).  For the full description of the how the chat app works, see [@ealsur's sample](https://github.com/ealsur/serverlessnotifications).  
 
 ## Objective of the Hack
 
@@ -12,7 +12,7 @@ Development of an MVP to store and search through chat content.
 ## Target Acceptance Criteria
 
 - Submited chats are saved to CosmosDB.
-- A CosmosDB Consistency level has been configured that works with Azure Search.
+- A CosmosDB consistency level has been configured that works with Azure Search.
 - All saved chats are searchable.
 - A minimal set of of REST apis using Azure Functions that will do a search based on the inputted keywords and return its results as a json.
 
@@ -38,10 +38,10 @@ Open your browser in the base address informed by the Azure Function's runtime (
 
 Just click in the Deploy to **Azure button** and it will guide you into automatically creating the Azure Function app with all the code deployed on Azure.
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fealsur%2Fserverlessnotifications%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fbecheng%2Fcosmosdb-cognitivesearch-hack%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fealsur%2Fserverlessnotifications%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fbecheng%2Fcosmosdb-cognitivesearch-hack%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
