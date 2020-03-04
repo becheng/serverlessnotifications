@@ -3,7 +3,7 @@
 Hackathon to store and search through chats/conversations using  CosmosDB + Azure Cognitive Search.
 The primary focus will be to store and search through chat content; and not about the development of an actual chat app.  This hack will build upon an existing chat app sample and extend it with search functionality.  
 
-Note: this repo is fork of https://github.com/ealsur/serverlessnotifications which contains a sample chat application built using CosmosDB, Azure Functions and SignalR.  
+Note: this repo is fork of https://github.com/ealsur/serverlessnotifications which contains a sample chat application built using [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction), [Azure Functions](https://azure.microsoft.com/services/functions/) for hosting and event processing and [Azure SignalR](https://docs.microsoft.com/azure/azure-signalr/signalr-overview).  For the full description of the how sample chat app works, this [repo](https://github.com/ealsur/serverlessnotifications).  
 
 ## Objective of the Hack
 Development of an MVP to store and search through chat content.
@@ -14,7 +14,26 @@ Development of an MVP to store and search through chat content.
 - All saved chats are searchable.
 - A minimal set of of REST apis that will do a search based on the inputted keywords and results is results.
 
-# ---------------------------------------------------------------------------------------------------------------
+## Getting started
+
+### Setup the environment
+1.  Click the Deploy to **Azure button** and it will guide you into automatically creating the Azure Function app with all the code deployed on Azure.
+
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fealsur%2Fserverlessnotifications%2Fmaster%2Fazuredeploy.json" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+</a>
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fealsur%2Fserverlessnotifications%2Fmaster%2Fazuredeploy.json" target="_blank">
+    <img src="http://armviz.io/visualizebutton.png"/>
+</a>
+
+Open your browser in the base address informed by the Azure Function's Portal (something along the lines of `https://<your-app-name>.azurewebsites.net`).
+
+## Acknowledges
+
+* The chat app code is based on the [@ealsur's sample](https://github.com/ealsur/serverlessnotifications).
+
+
+# -------------------------------------------------------------------------------
 # Serverless notifications with Azure Cosmos DB + Azure Functions + Azure SignalR
 
 This repo contains a reusable solution that creates a complete serverless scenario for a chat application that stores data in [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction), [Azure Functions](https://azure.microsoft.com/services/functions/) for hosting and event processing and [Azure SignalR](https://docs.microsoft.com/azure/azure-signalr/signalr-overview) for websocket client messaging.
