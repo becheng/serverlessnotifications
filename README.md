@@ -46,6 +46,11 @@ Just click in the Deploy to **Azure button** and it will guide you into automati
 
 Open your browser in the base address informed by the Azure Function's Portal (something along the lines of `https://<your-app-name>.azurewebsites.net`).
 
+## Architectual (Conceptual)
+@TODO: Flesh out the intial diagram 
+![conceptual architecture](https://github.com/becheng/cosmosdb-cognitivesearch-hack/icon48.png "Conceptual Architecture")
+
+
 ## Points to take into Consideration
 - Due to the low latency requiremments, i.e. the search operations must be in sync with population of the CosmosDB, the push model is the only option.  In a push model, the data is programatically sent to the Azure Search index.  Reference: https://docs.microsoft.com/en-us/azure/search/search-what-is-data-import#pushing-data-to-an-index   
 
