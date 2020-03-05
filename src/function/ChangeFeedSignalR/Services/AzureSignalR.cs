@@ -88,14 +88,14 @@ namespace ChangeFeedSignalR
                 Target = methodName,
                 Arguments = args
             };
-            var url = $"{endpoint}:5002/api/v1-preview/hub/{hubName}";
+            var url = $"{endpoint}:443/api/v1-preview/hub/{hubName}";
             var bearer = GenerateJwtBearer(null, url, null, DateTime.UtcNow.AddMinutes(30), accessKey);
             await PostJsonAsync(url, payload, bearer);
         }
 
         public string GetClientHubUrl(string hubName)
         {
-            return $"{endpoint}:5001/client/?hub={hubName}";
+            return $"{endpoint}:443/client/?hub={hubName}";
         }
 
         public string GenerateAccessToken(string hubName)
