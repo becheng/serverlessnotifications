@@ -47,8 +47,9 @@ Just click in the Deploy to **Azure button** and it will guide you into automati
 Open your browser in the base address informed by the Azure Function's Portal (something along the lines of `https://<your-app-name>.azurewebsites.net`).
 
 ## Architectual (Conceptual)
-@TODO: Flesh out the intial diagram 
-![conceptual architecture](https://github.com/becheng/cosmosdb-cognitivesearch-hack/icon48.png "Conceptual Architecture")
+@TODO: Flesh out the diagram below
+
+![alt text](https://github.com/becheng/cosmosdb-cognitivesearch-hack/blob/master/images/changefeedoverview.png "Conceptual Architecture")
 
 
 ## Points to take into Consideration
