@@ -23,7 +23,7 @@
 		},
 		"repoURL": {
 			"type": "string",
-			"defaultValue": "https://github.com/ealsur/serverlessnotifications.git",
+			"defaultValue": "https://github.com/becheng/cosmosdb-cognitivesearch-hack.git",
 			"metadata": {
 				"description": "The URL for the GitHub repository that contains the project to deploy."
 			}
