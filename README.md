@@ -23,7 +23,7 @@ Note: is selecting a Canadian region, select Canada East for all components.  Fo
 
 1. Create a **Azure Cosmos DB** account to obtain the **Connection String**, the account needs to be a **SQL API account**. REMARKS: the format of the connection string should be "Endpoint=https://{cosmosdb-name}.service.signalr.net;AccessKey={key};".
 2. Create a database called **chat** and a collection called **lines** (it can be the smallest possible 400RU collection).
-3. Create a **Azure SignalR** account to obtain the **Connection String**.  
+3. Create a **Azure SignalR** account to obtain the **Connection String**.  Select "Serverless" for the Sevice Mode and the Free tier. 
 4. Click the Deploy to **Azure button** and it will guide you into automatically creating the Azure Function app with all the code deployed on Azure.
 
 ### How to deploy
