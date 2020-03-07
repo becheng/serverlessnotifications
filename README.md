@@ -13,8 +13,7 @@ Development of an MVP to store and search through chat content.
 
 - Submited chats are saved to CosmosDB.
 - A CosmosDB consistency level has been configured that works with Azure Search.
-- All saved chats are searchable.
-- A minimal set of of REST apis using Azure Functions that will do a search based on the inputted keywords and return its results as a json.
+- All saved chats are searchable with low latency, i.e is searable as soon as it's saved.
 
 ## Getting started
 
@@ -24,9 +23,8 @@ Note: I recommend for select the East US 2 region for all components.  At the ti
 1. Create a **Azure Cosmos DB** account to obtain the **Connection String**, the account needs to be a **SQL API account**. REMARKS: the format of the connection string should be "Endpoint=https://{cosmosdb-name}.service.signalr.net;AccessKey={key};".
 2. Create a database called **chat** and a collection called **lines** (it can be the smallest possible 400RU collection).  **IMPORTANT**: Due the older version of the SDK, do the following steps to ensure reserved throughput at container level, otherwise the sample will not work.  
     - Uncheck "Provision thoughput" checkbox when creating the chat database.
-![alt text](https://github.com/becheng/cosmosdb-cognitivesearch-hack/blob/master/images/cdb-database.png "database config")
     - Check "Provision dedicated throughput for this container" and leave the default to 400RUs. 
-3. Create a **Azure SignalR** account to obtain the **Connection String**.  IMPORTANT: Select "Serverless" for the Sevice Mode and the Free tier. 
+3. Create a **Azure SignalR** account to obtain the **Connection String** (it can left at the Free tier).  **IMPORTANT**: Select "Serverless" for the Sevice Mode. 
 4. Click the Deploy to **Azure button** and it will guide you into automatically creating the Azure Function app with all the code deployed on Azure.
 
 ### How to deploy
@@ -54,7 +52,6 @@ Open your browser in the base address informed by the Azure Function's Portal (s
 @TODO: Flesh out the diagram below
 
 ![alt text](https://github.com/becheng/cosmosdb-cognitivesearch-hack/blob/master/images/changefeedoverview.png "Conceptual Architecture")
-
 
 ## Points to take into Consideration
 - Due to the low latency requiremments, i.e. the search operations must be in sync with population of the CosmosDB, the push model is the only option.  In a push model, the data is programatically sent to the Azure Search index.  Reference: https://docs.microsoft.com/en-us/azure/search/search-what-is-data-import#pushing-data-to-an-index   
