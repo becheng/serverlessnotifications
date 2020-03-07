@@ -19,16 +19,13 @@ Development of an MVP to store and search through chat content.
 ## Getting started
 
 ### Environment setup
-Note: I recommend for select the East US 2 region for all components.  At the time of writing this, Azure Signalr Service was not offered in all regions.   
+Note: I recommend for select the East US 2 region for all components.  At the time of writing this, Azure Signalr Service was not avaiable in all regions during my initial testing.   
 
 1. Create a **Azure Cosmos DB** account to obtain the **Connection String**, the account needs to be a **SQL API account**. REMARKS: the format of the connection string should be "Endpoint=https://{cosmosdb-name}.service.signalr.net;AccessKey={key};".
-2. Create a database called **chat** and a collection called **lines** (it can be the smallest possible 400RU collection).  
-IMPORTANT:
-Due the older version of the SDKs, it is important the following steps be taken otherwise the sample will not work.  
-- Uncheck "Provision thoughput" checkbox when creating the chat database.
+2. Create a database called **chat** and a collection called **lines** (it can be the smallest possible 400RU collection).  **IMPORTANT**: Due the older version of the SDK, do the following steps to ensure reserved throughput at container level, otherwise the sample will not work.  
+    - Uncheck "Provision thoughput" checkbox when creating the chat database.
 ![alt text](https://github.com/becheng/cosmosdb-cognitivesearch-hack/blob/master/images/cdb-database.png "database config")
-- Check "Provision dedicated throughput for this container" and leave the default to 400RUs. 
-
+    - Check "Provision dedicated throughput for this container" and leave the default to 400RUs. 
 3. Create a **Azure SignalR** account to obtain the **Connection String**.  IMPORTANT: Select "Serverless" for the Sevice Mode and the Free tier. 
 4. Click the Deploy to **Azure button** and it will guide you into automatically creating the Azure Function app with all the code deployed on Azure.
 
