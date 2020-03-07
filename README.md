@@ -18,7 +18,7 @@ Development of an MVP to store and search through chat content.
 ## Getting started
 
 ### Environment setup
-Note: I recommend for select the East US 2 region for all components.  At the time of writing this, Azure Signalr Service was not avaiable in all regions during my initial testing.   
+Note: I recommend selecting the EastUS2 region for all components - at the time of writing this, Azure Signalr Service was not avaiable in certain regions during my initial testing.   
 
 1. Create a **Azure Cosmos DB** account to obtain the **Connection String**, the account needs to be a **SQL API account**. REMARKS: the format of the connection string should be "Endpoint=https://{cosmosdb-name}.service.signalr.net;AccessKey={key};".
 2. Create a database called **chat** and a collection called **lines** (it can be the smallest possible 400RU collection).  **IMPORTANT**: Due the older version of the SDK, do the following steps to ensure reserved throughput at container level, otherwise the sample will not work.  
