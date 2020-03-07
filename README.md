@@ -11,9 +11,9 @@ Development of an MVP to store and search through chat content.
 
 ## Target Acceptance Criteria
 
-- Submited chats are saved to CosmosDB.
 - A CosmosDB consistency level has been configured that works with Azure Search.
 - All saved chats are searchable with low latency, i.e is searable as soon as it's saved.
+- A new set of REST api(s) to 'push' newly saved CosmosDB data to the Azure Search Index.  (Target Function Version=3 with .Net Core 3.1)
 
 ## Getting started
 
