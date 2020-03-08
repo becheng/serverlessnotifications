@@ -11,7 +11,6 @@ Development of an MVP to store and search through chat content.
 
 ## Target Acceptance Criteria
 
-- A CosmosDB consistency level has been configured that works with Azure Search.
 - All saved chats are searchable with low latency, i.e is searable as soon as it's saved.
 - A new set of REST api(s) to 'push' newly saved CosmosDB data to the Azure Search Index.  (Target Function Version=3 with .Net Core 3.1)
 
@@ -48,7 +47,7 @@ Just click in the Deploy to **Azure button** and it will guide you into automati
 
 Open your browser in the base address informed by the Azure Function's Portal (something along the lines of `https://<your-app-name>.azurewebsites.net`).
 
-## Architectual (Conceptual)
+## Architecture
 ![alt text](https://github.com/becheng/cosmosdb-cognitivesearch-hack/blob/master/images/cosmos+search+hack_architecture.png "Conceptual Architecture")
 
 ## Points to take into Consideration
