@@ -23,7 +23,8 @@ namespace ChangeFeedSignalR
             ConnectionStringSetting = "AzureCosmosDBConnectionString",
             LeaseConnectionStringSetting = "AzureCosmosDBConnectionString",
             CreateLeaseCollectionIfNotExists = true,
-            LeaseCollectionName = "leases")]IReadOnlyList<Document> documents, TraceWriter log)
+            LeaseCollectionName = "leases",
+            LeaseCollectionPrefix = "signalr")]IReadOnlyList<Document> documents, TraceWriter log)
         {
             if (documents != null && documents.Count > 0)
             {
