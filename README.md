@@ -50,7 +50,7 @@ Open your browser in the base address informed by the Azure Function's Portal (s
 ## Architecture
 ![alt text](https://github.com/becheng/cosmosdb-cognitivesearch-hack/blob/master/images/cosmos+search+hack_architecture.png "Conceptual Architecture")
 
-## Points to take into Consideration
+## Considerations
 
 - Due to the low latency requiremments, i.e. the search operations must be in sync with population of the CosmosDB, the push model is the only option.  In a push model, the data is programatically sent to the Azure Search index.  Reference: https://docs.microsoft.com/en-us/azure/search/search-what-is-data-import#pushing-data-to-an-index
 
